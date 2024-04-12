@@ -1,5 +1,5 @@
 #include "LogerAsync.h"
-#include <format>
+//#include <format>
 #include <iostream>
 #include <fstream>
 
@@ -171,7 +171,8 @@ void LogerAsync::LogToFile(const std::string& timestamp, const StringList& cmds)
 {
 	auto get_file_name = [&]() noexcept
 	{
-		return std::format("{}_{}_{}_{}", FILE_NAME, timestamp, std::to_string(m_Counter), FILE_EXTENSION);
+		//return std::format("{}_{}_{}_{}", FILE_NAME, timestamp, std::to_string(m_Counter), FILE_EXTENSION);
+		return FILE_NAME + timestamp +  std::to_string(m_Counter) + FILE_EXTENSION;
 	};
 
 	if (!timestamp.empty() && !cmds.empty())
