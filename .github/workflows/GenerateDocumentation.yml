@@ -3,6 +3,7 @@ name: Generate Documentation
 on:
   workflow_dispatch:
 
+
 jobs:
   generate_documentation:
     runs-on: ubuntu-latest
